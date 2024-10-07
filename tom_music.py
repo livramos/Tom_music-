@@ -83,3 +83,4 @@ def run_bot():
     client.run(TOKEN)
 
 run_bot()
+# atualmente com erro na correlação entre o ffmpeg com o discord 
