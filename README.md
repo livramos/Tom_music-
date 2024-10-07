@@ -15,6 +15,9 @@ onde o código está "rodando"
 #Tom_music.py:
 onde todas as funções estão armazenadas 
 
+obs!
+a pasta venv é em relação a área de trabalho virtual onde ele está sendo gerado, nem todas as bibliotecas estão no arquivo então talvez seja preciso adicionar eles através do Pip install no terminal da sua ide!!
+
 Considerações: 
 o Bot está na sua primeira versão, pretendo colocar outras plataformas para correlacionar com ele e não só o youtube (como soundcloud, deezer e spotify)
 e mais futuramente pretendo implementar botões de reações que seja possível a interação direta do úsuario através deles 
