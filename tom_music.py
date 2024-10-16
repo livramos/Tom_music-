@@ -78,11 +78,29 @@ def run_bot():
             except Exception as e:
                 print(f"Erro ao tentar tocar a música: {e}")
                 await message.channel.send("Houve um erro ao tentar tocar a música.")
-    
+        if message.content.startswith("&pause"):
+            try:
+                voice_clients[message.guild.id].pause()
+            except Exception as e:
+                print(e)
+#retomar a música após o pause 
+        if message.content.startswith("&resume"):
+            try:
+                voice_clients[message.guild.id].resume()
+            except Exception as e:
+                print(e)
+     #parar com a música e desconectar
+        if message.content.startswith("&stop"):
+            try:
+                voice_clients[message.guild.id].stop()
+                await voice_clients[message.guild.id].disconnect()
+            except Exception as e:
+                print(e)
+
+
+
     # Rodar o bot
     client.run(TOKEN)
 
 run_bot()
-# atualmente com erro na correlação entre o ffmpeg com o discord 
-####class discord.FFmpegPCMAudio(source, *, executable='ffmpeg', pipe=False, stderr=None, before_options=None, options=None) tenta isso aqui dps 
-### https://discordpy.readthedocs.io/en/latest/api.html?highlight=ffmpeg#ffmpegaudio 
+#agora o bot, da play, pausa, volta e para, mas as vezes para sozinho 
