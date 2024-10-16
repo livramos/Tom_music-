@@ -85,3 +85,4 @@ def run_bot():
 run_bot()
 # atualmente com erro na correlação entre o ffmpeg com o discord 
 ####class discord.FFmpegPCMAudio(source, *, executable='ffmpeg', pipe=False, stderr=None, before_options=None, options=None) tenta isso aqui dps 
+### https://discordpy.readthedocs.io/en/latest/api.html?highlight=ffmpeg#ffmpegaudio 
